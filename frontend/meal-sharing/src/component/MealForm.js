@@ -8,7 +8,7 @@ function MealForm({ postData }) {
     const dataForm = new FormData();
     data.id = Math.floor(Math.random() * 100);
     // data.image = data.image[0];
-    dataForm.append("image", data.image[0]);
+    // dataForm.append("image", data.image[0]);
     dataForm.append("title", data.title);
     dataForm.append("reviews", data.reviews);
     dataForm.append("price", data.price);
@@ -53,10 +53,10 @@ function MealForm({ postData }) {
           <label>Price</label>
           <input type="text" name="price" ref={register} />
         </div>
-        <div>
+        {/* <div>
           <label>image</label>
           <input type="file" name="image" ref={register} />
-        </div>
+        </div> */}
         <div>
           <button type="submit">Add Meal</button>
         </div>

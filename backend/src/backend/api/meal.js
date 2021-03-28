@@ -50,8 +50,8 @@ mealRouter.delete("/deletemeal", async (req, res) => {
 
 /** Post Request **/
 mealRouter.post("/meal", upload.single("image"), async (req, res) => {
-  const image = req.file;
-  console.log(image, req.body);
+  // const image = req.file;
+  // console.log(image, req.body);
   try {
     /**--------------------**/
     const newConcert = await knex("meal").insert({
@@ -62,9 +62,9 @@ mealRouter.post("/meal", upload.single("image"), async (req, res) => {
       created_date: req.body.created_date,
       // reservations: req.body.reservations,
       price: req.body.price,
-      imagePath: req.file.path,
+      // imagePath: req.file.path,
     });
-    res.send(image);
+    // res.send(image);
   } catch (error) {
     console.log(error);
   }
